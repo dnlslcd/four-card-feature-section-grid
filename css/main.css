@@ -112,16 +112,24 @@ body {
 
 @media (min-width: 680px) {
     .header-paragraph {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     /** Ejercicio 1. Muestra las tarjetas en 2 columnas y 2 filas usando Grid  */
     .cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        /* grid-template-rows: repeat(2, 1fr); No hace falta */
         gap: 20px;
     }
 }
+    
+    /** Ejercicio 2: Crea una nueva media query para que, cuando lleguemos como mínimo 1200px de viewport width, apliquemos cambiemos el grid a .card {} , con todas las propiedades necesarias para que se vea como en diseño.   */
+@media (min-width: 900px) {
+ 
+    .cards {
+        grid-column: 2 / 1;
+        grid-row: 1 /2;
+    }
+}
 
-/** Ejercicio 2: Crea una nueva media query para que, cuando lleguemos como mínimo 1200px de viewport width, apliquemos cambiemos el grid a .card {} , con todas las propiedades necesarias para que se vea como en diseño.   */
